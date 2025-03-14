@@ -2,7 +2,7 @@
 
 This repository contains my personal Neovim setup, including plugins, keybindings, and custom configurations.  
 
-## 👅 Installation  
+##  Installation  
 
 ### **1. Install Neovim**  
 Ensure Neovim is installed on your system:  
