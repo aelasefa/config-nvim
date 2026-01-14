@@ -1,85 +1,30 @@
-# 🌟 My Neovim Configuration  
+# 🧰 Portable Neovim + tmux Setup
 
-This repository contains my personal Neovim setup, including plugins, keybindings, and custom configurations.  
+This repository allows me to reproduce **exactly the same development environment** (Neovim + tmux) on **any machine** using a single Python script.
 
-##  Installation  
-
-### **1. Install Neovim**  
-Ensure Neovim is installed on your system:  
-
-- **Linux (Debian/Ubuntu-based)**  
-  ```bash
-  sudo apt install neovim
-  ```  
-- **Arch Linux**  
-  ```bash
-  sudo pacman -S neovim
-  ```  
-- **macOS (Homebrew)**  
-  ```bash
-  brew install neovim
-  ```  
-- **Windows (Scoop)**  
-  ```powershell
-  scoop install neovim
-  ```  
-
-### **2. Clone This Repo**  
-```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git ~/.config/nvim
-```
-
-### **3. Install Plugin Manager (If Needed)**  
-
-#### **Lazy.nvim (Recommended)**  
-```bash
-mkdir -p ~/.local/share/nvim/lazy
-git clone --filter=blob:none https://github.com/folke/lazy.nvim.git ~/.local/share/nvim/lazy/lazy.nvim
-```
-
-#### **Packer.nvim (Alternative)**  
-```bash
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-### **4. Open Neovim and Install Plugins**  
-
-- **Lazy.nvim**  
-  ```vim
-  :Lazy sync
-  ```
-- **Packer.nvim**  
-  ```vim
-  :PackerSync
-  ```
-- **Vim-Plug**  
-  ```vim
-  :PlugInstall
-  ```
-
-### **5. Restart Neovim**  
-Close and reopen Neovim to apply the changes.  
+The setup is **clean, reproducible, and safe**:
+- Installs **Neovim** if missing
+- Installs **tmux** if missing
+- Sets `vim` → `nvim` alias
+- Downloads and applies my configs automatically
+- Works on Linux (Ubuntu/Debian) and macOS
 
 ---
 
-## 🛠 Features  
-- Custom keybindings  
-- Theme and UI enhancements  
-- Plugin manager support (Lazy.nvim/Packer.nvim)  
-- LSP and autocomplete setup  
-- Syntax highlighting  
+## 📁 Repository Structure
 
----
+```text
+dotfiles/
+├── nvim/
+│   ├── init.lua
+│   └── lua/
+│       └── ...
+├── tmux/
+│   └── .tmux.conf
+├── setup_env.py
+└── README.md
 
-## 📌 To-Do  
-- [ ] Improve documentation  
-- [ ] Optimize startup time  
-- [ ] Add more keybindings  
-
----
-
-## 💚 License  
-This configuration is free to use and modify. Happy coding! 🚀  
+git clone https://github.com/aelasefa/config-nvim.git
+cd config-nvim
 
 
